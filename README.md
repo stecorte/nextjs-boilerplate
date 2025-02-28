@@ -1,3 +1,4 @@
+# Next.js Boilerplate
 This is a Next.js boilerplate with
 - React: 19
 - NextJS version: 15.1.7
@@ -19,8 +20,13 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Internationalization
 
-This project uses [`next-intl`](https://next-intl.dev/) for multi-language support. It is configured for App Router and without i18n routing.  
-To change the app locale, set the `x-locale` cookie value with a valid language 2-digit code.
+This project uses [`next-intl`](https://next-intl.dev/) for multi-language support.  
+It is configured for App Router and without i18n routing.  
+
+To change the app locale, set the `x-locale` cookie value with a valid language 2-digit code.  
+The default language is the browser's one, if present in the list of enabled languages. 
+
+See logic inside `src/i18n/request.ts` file.
 
 ## ESLint
 ESLint is configured. Default tab size is 4 spaces for the majority of the file extensions of this codebase. 
