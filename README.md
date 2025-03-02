@@ -18,6 +18,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Components
+
+This boilerplate use [`shadcn/ui`](https://ui.shadcn.com/).  
+To add a components navigate the documentation, select the component, then run the command to install it (or copy and paste the code).
+
 ## Internationalization
 
 This project uses [`next-intl`](https://next-intl.dev/) for multi-language support.  
