@@ -1,27 +1,38 @@
 import { getRequestConfig } from 'next-intl/server';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 
 export default getRequestConfig(async () => {
-    const locales: string[] = ["it-IT", "en-GB"]
-    const defaultLocale: string = "en-GB"
+    const locales: string[] = ["it", "en"]
+    const defaultLocale: string = "en"
 
     let locale: string = defaultLocale
 
-    // 1. Read locale from system preferences
-    let browserLocale: string | undefined = navigator.language
-    if (typeof browserLocale === "string") {
+    // 1. Read locale from Accept-Language header
+    try {
+        const headersList = headers()
+        const acceptLanguage = (await headersList).get('accept-language')
 
-        if (browserLocale.length == 2) {
-            if (browserLocale.toLowerCase() === "it") {
-                browserLocale = "it-IT"
-            } else if (browserLocale.toLowerCase() === "en") {
-                browserLocale = "en-GB"
+        if (acceptLanguage) {
+            // Parse the Accept-Language header
+            const browserLocales = acceptLanguage.split(',')
+                .map(lang => {
+                    const [locale, priority = 'q=1.0'] = lang.trim().split(';');
+                    const q = parseFloat(priority.split('=')[1] || '1.0');
+                    return { locale, q };
+                })
+                .sort((a, b) => b.q - a.q)
+                .map(item => item.locale)
+
+            // Check if any of the preferred languages match our supported locales
+            for (const browserLocale of browserLocales) {
+                if (locales.includes(browserLocale)) {
+                    locale = browserLocale
+                    break
+                }
             }
         }
-
-        if (locales.includes(browserLocale)) {
-            locale = browserLocale
-        }
+    } catch (error) {
+        console.error('Error parsing Accept-Language header:', error);
     }
 
     // 2. Override locale if set in cookie

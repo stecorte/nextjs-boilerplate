@@ -1,0 +1,14 @@
+{
+    "HomePage": {
+        "title": "Hello, World!",
+        "description": "Boilerplate per Next Js"
+    },
+    "Auth": {
+        "Login": {
+            "title": "Bentornato!",
+            "forgotPassword": "Password dimenticata?",
+            "email": "Email",
+            "password": "Password"
+        }
+    }
+}
