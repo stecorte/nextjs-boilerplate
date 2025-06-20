@@ -1,0 +1,10 @@
+.forgotPasswordCardTitle {
+    font-size: 26px;
+}
+
+.goBackLink {
+    color: grey;
+    font-size: 14px;
+    margin-top: 16px;
+    display: block;
+}

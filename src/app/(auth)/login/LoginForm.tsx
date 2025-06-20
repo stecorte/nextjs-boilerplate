@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import styles from './styles.module.css'
-import { useState } from 'react';
+import { useState } from 'react'
 
 export default function LoginForm() {
     const t = useTranslations('Auth.Login')
@@ -53,6 +53,10 @@ export default function LoginForm() {
                     className="block w-full mt-3"
                     onClick={handleLogin}
                 >Login</Button>
+
+                <p className="mt-4">
+                    {t('notRegisteredYet')} <Link href="signup" className={styles.subscibeLink}>{t('subscribe')}</Link>
+                </p>
             </CardContent>
         </Card>
     )

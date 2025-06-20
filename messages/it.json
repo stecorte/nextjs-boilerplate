@@ -8,7 +8,19 @@
             "title": "Bentornato!",
             "forgotPassword": "Password dimenticata?",
             "email": "Email",
-            "password": "Password"
+            "password": "Password",
+            "notRegisteredYet": "Non sei ancora registrato?",
+            "subscribe": "Iscriviti"
+        },
+        "ForgotPassword": {
+            "title": "Password dimenticata?",
+            "subtitle": "Inserisci la tua email per recuperare la password",
+            "email": "Email",
+            "recoverPassword": "Reimposta password",
+            "back": "Indietro"
+        },
+        "Signup": {
+            "title": "Iscriviti"
         }
     }
 }

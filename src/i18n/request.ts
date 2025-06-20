@@ -2,8 +2,8 @@ import { getRequestConfig } from 'next-intl/server';
 import { cookies, headers } from 'next/headers';
 
 export default getRequestConfig(async () => {
-    const locales: string[] = ["it", "en"]
-    const defaultLocale: string = "en"
+    const locales: string[] = ["it"]
+    const defaultLocale: string = "it"
 
     let locale: string = defaultLocale
 
