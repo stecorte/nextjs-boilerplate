@@ -33,6 +33,9 @@ The default language is the browser's one, if present in the list of enabled lan
 
 See logic inside `src/i18n/request.ts` file.
 
+## Fetchin data
+The project integrates [`swr library`](https://swr.vercel.app/). You can use the `useApi` hook to call an API endpoint from your `NEXT_PUBLIC_API_BASE_URL` base URL, defined in the `.env` file. 
+
 ## ESLint
 ESLint is configured. Default tab size is 4 spaces for the majority of the file extensions of this codebase. 
 If you are using VSCode, please remember to set this settigs with the following values:
