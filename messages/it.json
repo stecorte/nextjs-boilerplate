@@ -21,6 +21,15 @@
         },
         "Signup": {
             "title": "Iscriviti"
+        },
+        "Join": {
+            "continue-with-email": "Continua con email",
+            "insert-your-email-address": "Inserisci il tuo indirizzo email",
+            "continue": "Continua",
+            "create-secure-password": "Crea una password sicura con almeno 10 caratteri",
+            "insert-verification-code": "Inserisci il codice a 6 cifre che ti abbiamo inviato all'indirizzio :email",
+            "resend-code": "Invia un nuovo codice",
+            "invalid-email": "Email non valida"
         }
     }
 }
